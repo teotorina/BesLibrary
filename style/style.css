@@ -1,0 +1,32 @@
+body {
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 400;
+    font-family: 'Roboto' sans-serif;
+    color: #000;
+    background-color: #D9FDEC;
+}
+
+.container {
+    max-width: 912px;
+    padding: 0 16px;
+    margin: 0 auto;
+}
+
+.header__wrapper {
+    background-color: #8BFBC5;
+    height: 60px;
+}
+
+.header__inner {
+    height: 60px;
+}
+
+.header__content,
+.header__inner {
+    display: flex;
+    /* отступы у элементов одинаковы друг от друга */
+    justify-content: space-between;
+    /* элементы по центру друг друга по вертикали */
+    align-items: center;
+}

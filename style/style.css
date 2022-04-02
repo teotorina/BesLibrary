@@ -74,38 +74,38 @@ body {
     align-items: center;
 }
 
+.main__menu{
+    width: 250px;
+}
+
 .main__wrapper{
     margin-top: 10px;
 }
 
 .nav__wrapper{
-    width: 250px;
     background-color: #FFFFFF;
 }
 
-.nav__item-wrapper{
-    height: 25px;
-    display: flex;
-    align-items: center;
-}
-
-.nav__item{
+.nav__wrapper .nav__item{
     height: 35px;
     padding: 5px;
+    cursor: pointer;
 }
-.nav__item-wrapper{
-    height: 25px;
-    border-radius: 5px;
-}
-.nav__item-wrapper:hover{
+.nav__item:hover
+{
     background-color: #eeeeee;
 }
 
 .nav__item-img{
     height: 25px;
     margin-left: 7px;
+    display: inline-block;
 }
 .nav__item-link{
     margin-left: 7px;
-    display: block;
+    height: 25px;
+    vertical-align: super;
+}
+.nav__item-link:visited{
+    color:inherit
 }

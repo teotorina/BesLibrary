@@ -4,7 +4,7 @@ body {
     font-weight: 400;
     font-family: 'Roboto', sans-serif;
     color: #000;
-    background-color: #D9FDEC;
+    background-color: #F0FEF8;
 }
 
 .container {
@@ -65,8 +65,7 @@ body {
 
 
 .header__content,
-.header__inner,
-.main_inner {
+.header__inner {
     display: flex;
     /* отступы у элементов одинаковы друг от друга */
     justify-content: space-between;
@@ -74,38 +73,66 @@ body {
     align-items: center;
 }
 
-.main__menu{
-    width: 250px;
+.wrapper {
+    margin: 10px 0;
 }
 
-.main__wrapper{
-    margin-top: 10px;
+.sidebar {
+    max-width: 250px;
+    padding: 0px 10px;
+    background-color: #fff;
 }
 
-.nav__wrapper{
-    background-color: #FFFFFF;
+.sidebar__menu-list:first-child {
+    border-bottom: 1px solid #000;
 }
 
-.nav__wrapper .nav__item{
-    height: 35px;
-    padding: 5px;
-    cursor: pointer;
-}
-.nav__item:hover
-{
-    background-color: #eeeeee;
+.sidebar__menu-list {
+    display: block;
+    padding: 20px 0 !important;
 }
 
-.nav__item-img{
-    height: 25px;
-    margin-left: 7px;
-    display: inline-block;
+.sidebar__menu-item {
+    padding-left: 15px;
 }
-.nav__item-link{
-    margin-left: 7px;
-    height: 25px;
-    vertical-align: super;
+
+.sidebar__menu-list:first-child .sidebar__menu-item {
+    padding-left: 30px;
+    position: relative;
 }
-.nav__item-link:visited{
-    color:inherit
+
+.sidebar__menu-item + .sidebar__menu-item {
+    margin-top: 15px;
+}
+
+.sidebar__menu-list:first-child .sidebar__menu-item::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 5px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 20px;
+    width: 20px;
+}
+
+.sidebar__menu-item.book::after {
+    background-image: url("../images/book_icon.svg");
+}
+
+.sidebar__menu-item.star::after {
+    background-image: url("../images/star_icon.svg");
+}
+
+.sidebar__menu-item.library::after {
+    background-image: url("../images/library_icon.svg");
+    height: 25px !important;
+    width: 25px !important;
+    top: -3px !important;
+}
+
+.sidebar__menu-link {
+    font-size: 16px;
+    line-height: 19px;
 }

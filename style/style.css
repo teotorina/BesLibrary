@@ -83,6 +83,10 @@ body {
     background-color: #fff;
 }
 
+.sidebar + .sidebar{
+    margin-top: 15px;
+}
+
 .sidebar__menu-list:first-child {
     border-bottom: 1px solid #000;
 }

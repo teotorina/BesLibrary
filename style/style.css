@@ -13,6 +13,11 @@ body {
     margin: 0 auto;
 }
 
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
+
 .header__wrapper {
     background-color: #8BFBC5;
     height: 60px;
@@ -34,7 +39,7 @@ body {
     content: "";
     width: 17px;
     height: 22px;
-    background-image: url("../images/search_icon.svg");
+    background-image: url("../images/icons/search_icon.svg");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: contain;
@@ -122,15 +127,15 @@ body {
 }
 
 .sidebar__menu-item.book::after {
-    background-image: url("../images/book_icon.svg");
+    background-image: url("../images/icons/book_icon.svg");
 }
 
 .sidebar__menu-item.star::after {
-    background-image: url("../images/star_icon.svg");
+    background-image: url("../images/icons/star_icon.svg");
 }
 
 .sidebar__menu-item.library::after {
-    background-image: url("../images/library_icon.svg");
+    background-image: url("../images/icons/library_icon.svg");
     height: 25px !important;
     width: 25px !important;
     top: -3px !important;

@@ -87,8 +87,8 @@ body {
     margin-top: 15px;
 }
 
-.sidebar__menu-list:first-child {
-    border-bottom: 1px solid #000;
+.sidebar__menu-list:not(.sidebar__menu-list:first-child) {
+    border-top: 1px solid #000;
 }
 
 .sidebar__menu-list {
@@ -139,4 +139,25 @@ body {
 .sidebar__menu-link {
     font-size: 16px;
     line-height: 19px;
+}
+
+.sidebar__menu-item.find-book-form__input{
+    padding-left: 14px !important;
+}
+
+.find-book-form__input{
+    padding-left: 0;
+    background-color: #fff;
+    padding: 3px 14px;
+    font-size: 12px;
+    border-width: 1px;
+    border-color: #5CB48A;
+    border-style: solid;
+    display: block;
+    margin: auto;
+    width: 190px;
+}
+
+.find-book-form__input[type = text]{
+    border-radius: 20px;
 }

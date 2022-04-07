@@ -13,11 +13,6 @@ body {
     margin: 0 auto;
 }
 
-.flex {
-    display: flex;
-    justify-content: space-between;
-}
-
 .header__wrapper {
     background-color: #8BFBC5;
     height: 60px;
@@ -68,7 +63,6 @@ body {
     letter-spacing: 0.1em;
 }
 
-
 .header__content,
 .header__inner {
     display: flex;
@@ -80,6 +74,11 @@ body {
 
 .wrapper {
     margin: 10px 0;
+}
+
+.wrapper__inner {
+    display: flex;
+    justify-content: space-between;
 }
 
 .sidebar {
@@ -148,6 +147,23 @@ body {
 
 .sidebar__menu-item.find-book-form__input{
     padding-left: 14px !important;
+}
+
+/* .sidebar__menu-wrapper {
+    position: relative;
+} */
+
+.sidebar__menu-wrapper {
+    content: "";
+    width: 17px;
+    height: 22px;
+    background-image: url("../images/icons/search_icon.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
 }
 
 .find-book-form__input{

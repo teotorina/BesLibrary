@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/reset.css">
     <link rel="stylesheet" href="style/style.css">
-    <title>Серия книг *название*</title>
+    <title>Серии книг</title>
 </head>
+
 <body>
     <header class="header">
         <div class="header__wrapper">
@@ -37,73 +39,82 @@
         </div>
     </header>
     <div class="wrapper">
-        <div class="container flex">
-            <div class="sidebars-wrapper">
-                <div class="sidebar">
-                    <nav class="sidebar__menu">
-                        <ul class="sidebar__menu-list">
-                            <li class="sidebar__menu-item book">
-                                <a class="sidebar__menu-link" href="#">
-                                    Книги
-                                </a>
-                            </li>
-                            <li class="sidebar__menu-item star">
-                                <a class="sidebar__menu-link" href="#">
-                                    Интересное
-                                </a>
-                            </li>
-                            <li class="sidebar__menu-item library">
-                                <a class="sidebar__menu-link" href="#">
-                                    Моя библиотека
-                                </a>
-                            </li>
-                        </ul>
-        
-                        <ul class="sidebar__menu-list">
-                            <li class="sidebar__menu-item">
-                                <a class="sidebar__menu-link" href="#">
-                                    Жанры
-                                </a>
-                            </li>
-                            <li class="sidebar__menu-item">
-                                <a class="sidebar__menu-link" href="#">
-                                    Авторы
-                                </a>
-                            </li>
-                            <li class="sidebar__menu-item">
-                                <a class="sidebar__menu-link" href="#">
-                                    Серии
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>
+        <div class="container">
+            <div class="wrapper__inner">
+                <div class="sidebar__wrapper">
+                    <div class="sidebar">
+                        <nav class="sidebar__menu">
+                            <ul class="sidebar__menu-list">
+                                <li class="sidebar__menu-item book">
+                                    <a class="sidebar__menu-link" href="#">
+                                        Книги
+                                    </a>
+                                </li>
+                                <li class="sidebar__menu-item star">
+                                    <a class="sidebar__menu-link" href="#">
+                                        Интересное
+                                    </a>
+                                </li>
+                                <li class="sidebar__menu-item library">
+                                    <a class="sidebar__menu-link" href="#">
+                                        Моя библиотека
+                                    </a>
+                                </li>
+                            </ul>
+
+                            <ul class="sidebar__menu-list">
+                                <li class="sidebar__menu-item">
+                                    <a class="sidebar__menu-link" href="#">
+                                        Жанры
+                                    </a>
+                                </li>
+                                <li class="sidebar__menu-item">
+                                    <a class="sidebar__menu-link" href="#">
+                                        Авторы
+                                    </a>
+                                </li>
+                                <li class="sidebar__menu-item">
+                                    <a class="sidebar__menu-link" href="#">
+                                        Серии
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    
+                    <div class="sidebar">
+                        <form class="sidebar__menu-list find-book-form" name="find-book">
+                            <div class="sidebar__menu-wrapper">
+                                <input class="sidebar__menu-item find-book-form__input" type="text" placeholder="Найти серию">
+                            </div>
+
+                            <select class="sidebar__menu-item find-book-form__input">
+                                <option value="popular">Популярные</option>
+                                <option value="morePopular">Еще популярные</option>
+                            </select>
+
+                            <select class="sidebar__menu-item find-book-form__input">
+                                <option value="popular">Все жанры</option>
+                                <option value="morePopular">Еще жанры</option>
+                            </select>
+                        </form>
+                    </div>
                 </div>
-                <div class="sidebar">
-                    <form class="sidebar__menu-list find-book-form" name="find-book">
-                        <input class="sidebar__menu-item find-book-form__input" type="text" placeholder="Найти серию">
-                        <select class="sidebar__menu-item find-book-form__input">
-                            <option value="popular">Популярные</option>
-                            <option value="morePopular">Еще популярные</option>
-                        </select>
-                        <select class="sidebar__menu-item find-book-form__input">
-                            <option value="popular">Все жанры</option>
-                            <option value="morePopular">Еще жанры</option>
-                        </select>
-                    </form>
-                </div>
+
+                <main>
+                    <div class="main__wrapper">
+                        <div class="main__header">
+
+                        </div>
+                        <div class="book-series_item">
+                            <img>
+                        </div>
+                    </div>
+                </main>
             </div>
         </div>
-        <main>
-            <div class="main__wrapper">
-                <div class="main__header">
-
-                </div>
-                <div class="book-series_item">
-                    <img >
-                </div>
-            </div>
-        </main>
     </div>
 
 </body>
+
 </html>

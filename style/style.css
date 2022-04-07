@@ -241,6 +241,7 @@ body {
 .book-series-item__img {
     height: 175px;
     margin-left: 25px;
+    margin-bottom: 25px;
 }
 
 .book-series-item-content {

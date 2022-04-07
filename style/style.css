@@ -4,14 +4,18 @@ body {
 }
 
 body {
-    display: flex;
-    flex-direction: column;
     font-size: 14px;
     line-height: 16px;
     font-weight: 400;
     font-family: 'Roboto', sans-serif;
     color: #000;
     background-color: #F0FEF8;
+}
+
+.body__wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .container {
@@ -201,7 +205,7 @@ body {
     background-image: url("../images/icons/search_icon.svg");
     background-repeat: no-repeat;
     background-position: 97% center;
-    background-size: contain;
+    background-size: 10%;
 }
 
 .main{
@@ -220,11 +224,8 @@ body {
 }
 
 .main__header-h1 {
-    font-family: 'Roboto';
-    font-style: normal;
+    text-transform: uppercase;
     font-weight: 400;
-    font-size: 14px;
-    line-height: 16px;
 }
 
 .main__slider {
@@ -246,10 +247,19 @@ body {
     margin: 0 10px;
 }
 
-.book-series-item__img {
-    height: 175px;
+.series__wrapper-img {
+    max-width: 120px;
+    overflow: hidden;
     margin-left: 25px;
     margin-bottom: 25px;
+}
+
+.book-series-item__img {
+    object-fit: contain;
+    /* width: 120px; */
+    /* height: 172px; */
+    /* margin-left: 25px;
+    margin-bottom: 25px; */
 }
 
 .book-series-item-content {
@@ -274,6 +284,12 @@ body {
     margin-top: 10px;
 }
 
+.book-series-item-content__series {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+}
+/* 
 .book-series-item-content__book-span{
     
     font-family: 'Inter';
@@ -281,14 +297,20 @@ body {
     font-weight: 400;
     font-size: 13px;
     line-height: 13px;
-}
+} */
+
 .book-series-item-content__book {
     margin-top: 5px;
     margin-left: 13px;
+    /* font-weight: 700; */
+    font-size: 11px;
+    line-height: 13px;
 }
+
 .book-series-item-content__book::marker {
     font-weight: 700;
 }
+
 .book-series-item-content__books-list{
     margin-bottom: 25px;
 }

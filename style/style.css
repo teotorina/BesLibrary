@@ -166,10 +166,6 @@ body {
     padding-left: 14px !important;
 }
 
-/* .sidebar__menu-wrapper {
-    position: relative;
-} */
-
 .sidebar__menu-wrapper {
     content: "";
     width: 17px;
@@ -198,4 +194,15 @@ body {
     background-repeat: no-repeat;
     background-position: 97% center;
     background-size: contain;
+}
+
+.main__slider {
+    background-color: #fff;
+}
+
+.main__slider-header {
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 16px;
+    line-height: 19px;  
 }

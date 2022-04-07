@@ -151,7 +151,7 @@ body {
 }
 
 .sidebar__menu-item.library::after {
-    background-image: url("../images/library_icon.svg");
+    background-image: url("../images/icons/library_icon.svg");
     height: 23px !important;
     width: 23px !important;
     top: -3px !important;

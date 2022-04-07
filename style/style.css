@@ -284,3 +284,24 @@ body {
 .book-series-item-content__books-list{
     margin-bottom: 25px;
 }
+
+.footer__wrapper {
+    background-color: #8BFBC5;
+}
+
+.footer__inner {
+    display: flex;
+    justify-content: flex-end;
+    height: 50px;
+    align-items: center;
+}
+
+.footer__text {
+    font-family: 'Old Standard TT';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 25px;
+    letter-spacing: 0.1em;
+    color: #199B5D;
+}

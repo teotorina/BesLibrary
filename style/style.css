@@ -228,17 +228,6 @@ body {
     font-weight: 400;
 }
 
-/* .main__slider {
-    background-color: #fff;
-}
-
-.main__slider-header {
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    font-size: 16px;
-    line-height: 19px;  
-} */
-
 .book-series-item {
     display: flex;
     justify-content: space-between;
@@ -256,10 +245,7 @@ body {
 
 .book-series-item__img {
     object-fit: contain;
-    /* width: 120px; */
-    /* height: 172px; */
-    /* margin-left: 25px;
-    margin-bottom: 25px; */
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 .book-series-item-content {
@@ -282,6 +268,8 @@ body {
 
 .book-series-item-content__text {
     margin-top: 10px;
+    font-size: 11px;
+    line-height: 13px;
 }
 
 .book-series-item-content__series {
@@ -289,20 +277,10 @@ body {
     font-size: 14px;
     line-height: 16px;
 }
-/* 
-.book-series-item-content__book-span{
-    
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 13px;
-    line-height: 13px;
-} */
 
 .book-series-item-content__book {
     margin-top: 5px;
     margin-left: 13px;
-    /* font-weight: 700; */
     font-size: 11px;
     line-height: 13px;
 }
@@ -383,7 +361,6 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    /* width: 100px; */
 }
 
 .swiper {

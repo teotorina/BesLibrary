@@ -14,7 +14,7 @@
                 </div>
 
 
-                <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+                <script src="script/lib/swiper.js"></script>
                 <script src="script/src/main.js"></script>
                 <script src="script/js_out/script.js"></script>
                 </body>

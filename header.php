@@ -8,7 +8,7 @@
     <title>BesLibrary</title>
 
     <link rel="stylesheet" href="style/reset.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
+    <link rel="stylesheet" href="style/lib/swiper.css">
     <link rel="stylesheet" href="style/style.css">
 </head>
 

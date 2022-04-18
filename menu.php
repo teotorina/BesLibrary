@@ -2,7 +2,7 @@
     <nav class="sidebar__menu">
         <ul class="sidebar__menu-list">
             <li class="sidebar__menu-item book">
-                <a class="sidebar__menu-link <?php if ($_SERVER['REQUEST_URI'] == "/index.php") echo "active"; ?>" href="index.php">
+                <a class="sidebar__menu-link <?php if ($_SERVER['REQUEST_URI'] == '/') echo "active"; ?>" href="/">
                     Книги
                 </a>
             </li>

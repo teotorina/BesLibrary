@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="style/reset.css">
     <link rel="stylesheet" href="style/lib/swiper.css">
     <link rel="stylesheet" href="style/style.css">
+    <link rel="icon" href="images/icon.png" type="image/png">
 </head>
 
 <body>

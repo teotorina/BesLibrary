@@ -1,10 +1,10 @@
 <?php
-include("header.php");
+include("src/header.php");
 ?>
 
 <div class="sidebar__wrapper">
     <?php
-    include("menu.php");
+    include("src/menu.php");
     ?>
 </div>
 
@@ -153,5 +153,5 @@ include("header.php");
 </main>
 
 <?php
-include("footer.php");
+include("src/footer.php");
 ?>

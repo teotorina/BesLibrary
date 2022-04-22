@@ -1,12 +1,11 @@
 <?php
-include("header.php");
+include("src/header.php");
 ?>
-
 
 <div class="sidebar__wrapper">
     <?php
-    include("menu.php");
-    include("filters.php");
+    include("src/menu.php");
+    include("src/filters.php");
     ?>
 </div>
 
@@ -31,7 +30,9 @@ include("header.php");
 
                 <ol class="book-series-item-content__books-list book-series-item-content__text">
                     <li class="book-series-item-content__book">
-                        Гарри Поттер и философский камень
+                        <a class="book__link" href="book.php">
+                            Гарри Поттер и философский камень
+                        </a> 
                     </li>
                     <li class="book-series-item-content__book">
                         Гарри Поттер и Тайная комната
@@ -140,5 +141,5 @@ include("header.php");
 </main>
 
 <?php
-include("footer.php");
+include("src/footer.php");
 ?>

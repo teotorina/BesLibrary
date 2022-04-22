@@ -116,6 +116,11 @@ body {
     background-color: #fff;
 }
 
+/* .sidebar__menu {
+    width: parent;
+    height: parent;
+} */
+
 .sidebar + .sidebar{
     margin-top: 15px;
 }
@@ -128,10 +133,6 @@ body {
     display: block;
     padding: 20px 0 !important;
 }
-
-/* .sidebar__menu-item {
-    padding-left: 15px;
-} */
 
 .sidebar__menu-list:first-child .sidebar__menu-item {
     padding-left: 30px;
@@ -184,12 +185,13 @@ body {
 
 .sidebar__menu-wrapper {
     content: "";
-    height: 20px;
+    height: 22px;
     width: 190px;
 }
 
 .find-book-form__input{
     margin: 10px 0;
+    padding-left: 4px;
     font-size: 12px;
     border-width: 1px;
     border-color: #5CB48A;
@@ -201,6 +203,7 @@ body {
 
 .find-book-form__input[type = text]{
     margin-top: 0 !important;
+    padding-left: 8px;
     border-radius: 20px;
     background-image: url("../images/icons/search_icon.svg");
     background-repeat: no-repeat;
@@ -213,7 +216,7 @@ body {
     font-size: 14px;
     line-height: 17px;
     min-width: 190px;
-    height: 20px;
+    height: 22px;
     width: 100%;
 }
 
@@ -382,4 +385,9 @@ body {
     position: absolute;
     top: 54%;
     transform: translateY(-50%);
+}
+
+.book__img {
+    width: 200px;
+    
 }

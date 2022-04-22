@@ -4,5 +4,5 @@
       "module": "commonjs",
       "sourceMap": true,
       "outDir": "script/js_out"
-    }
   }
+}

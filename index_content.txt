@@ -1,0 +1,27 @@
+images/book-covers/garri-potter-3.jpg
+Гарри Поттер и Узник Азкабана
+Дж.К.Роулинг
+images/book-covers/garri-potter-3.jpg
+Гарри Поттер и философский камень
+Дж.К.Роулинг
+images/book-covers/garri-potter-3.jpg
+Гарри Поттер и Тайная комната
+Дж.К.Роулинг
+images/book-covers/hronici_narnii.jpg
+Лев, Колдунья и Платяной шкаф
+Клайв С. Льюис
+images/book-covers/hronici_narnii.jpg
+Принц Каспиан
+Клайв С. Льюис
+images/book-covers/hronici_narnii.jpg
+Покоритель Зари, или Плавание на край света
+Клайв С. Льюис
+images/book-covers/witcher.webp
+Последнее желание
+А. Сапковский
+images/book-covers/witcher.webp
+Меч Предназначения
+А. Сапковский
+images/book-covers/witcher.webp
+Кровь эльфов
+А. Сапковский

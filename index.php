@@ -22,89 +22,24 @@ include("header.php");
 
         <div class="swiper">
             <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <div class="block__wrapper-img">
-                        <img class="block__img" src="images/book-covers/garri-potter-3.jpg" alt="горе от ума">
-                    </div>
-                    <h3 class="block__book-title">
-                        Гарри Поттер и Узник Азкабана
-                    </h3>
-                    <p class="block__book-author">
-                        Дж.К.Роулинг
-                    </p>
-                </div>
+            <?php
+                $file = fopen("index_content.txt", "r");
+                while(!feof($file))
+                {
 
+                ?>
                 <div class="swiper-slide">
                     <div class="block__wrapper-img">
-                        <img class="block__img" src="images/book-covers/garri-potter-3.jpg" alt="горе от ума">
+                        <img class="block__img" src="<?php echo fgets($file); ?>" alt="горе от ума">
                     </div>
                     <h3 class="block__book-title">
-                        Гарри Поттер и Узник Азкабана
+                        <?php echo fgets($file); ?>
                     </h3>
                     <p class="block__book-author">
-                        Дж.К.Роулинг
+                        <?php echo fgets($file); ?>
                     </p>
                 </div>
-
-                <div class="swiper-slide">
-                    <div class="block__wrapper-img">
-                        <img class="block__img" src="images/book-covers/garri-potter-3.jpg" alt="горе от ума">
-                    </div>
-                    <h3 class="block__book-title">
-                        Гарри Поттер и Узник Азкабана
-                    </h3>
-                    <p class="block__book-author">
-                        Дж.К.Роулинг
-                    </p>
-                </div>
-
-                <div class="swiper-slide">
-                    <div class="block__wrapper-img">
-                        <img class="block__img" src="images/book-covers/garri-potter-3.jpg" alt="горе от ума">
-                    </div>
-                    <h3 class="block__book-title">
-                        Гарри Поттер и Узник Азкабана
-                    </h3>
-                    <p class="block__book-author">
-                        Дж.К.Роулинг
-                    </p>
-                </div>
-
-                <div class="swiper-slide">
-                    <div class="block__wrapper-img">
-                        <img class="block__img" src="images/book-covers/garri-potter-3.jpg" alt="горе от ума">
-                    </div>
-                    <h3 class="block__book-title">
-                        Гарри Поттер и Узник Азкабана
-                    </h3>
-                    <p class="block__book-author">
-                        Дж.К.Роулинг
-                    </p>
-                </div>
-
-                <div class="swiper-slide">
-                    <div class="block__wrapper-img">
-                        <img class="block__img" src="images/book-covers/garri-potter-3.jpg" alt="горе от ума">
-                    </div>
-                    <h3 class="block__book-title">
-                        Гарри Поттер и Узник Азкабана
-                    </h3>
-                    <p class="block__book-author">
-                        Дж.К.Роулинг
-                    </p>
-                </div>
-
-                <div class="swiper-slide">
-                    <div class="block__wrapper-img">
-                        <img class="block__img" src="images/book-covers/garri-potter-3.jpg" alt="горе от ума">
-                    </div>
-                    <h3 class="block__book-title">
-                        Гарри Поттер и Узник Азкабана
-                    </h3>
-                    <p class="block__book-author">
-                        Дж.К.Роулинг
-                    </p>
-                </div>
+                <?php } ?>
             </div>
         </div>
         <div class="swiper-button-prev"></div>

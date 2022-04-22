@@ -129,9 +129,9 @@ body {
     padding: 20px 0 !important;
 }
 
-.sidebar__menu-item {
+/* .sidebar__menu-item {
     padding-left: 15px;
-}
+} */
 
 .sidebar__menu-list:first-child .sidebar__menu-item {
     padding-left: 30px;
@@ -184,32 +184,37 @@ body {
 
 .sidebar__menu-wrapper {
     content: "";
-    width: 17px;
-    height: 22px;
-    
-    top: 50%;
-    transform: translateY(-50%);
-    right: 10px;
+    height: 20px;
+    width: 190px;
 }
 
 .find-book-form__input{
-    padding-left: 0;
-    padding: 3px 14px;
+    margin: 10px 0;
     font-size: 12px;
     border-width: 1px;
     border-color: #5CB48A;
     border-style: solid;
     display: block;
-    margin: auto;
     width: 190px;
+    height: 20px;
 }
 
 .find-book-form__input[type = text]{
+    margin-top: 0 !important;
     border-radius: 20px;
     background-image: url("../images/icons/search_icon.svg");
     background-repeat: no-repeat;
     background-position: 97% center;
     background-size: 10%;
+}
+
+.sidebar__menu-click {
+    background-color: #8BFBC5;
+    font-size: 14px;
+    line-height: 17px;
+    min-width: 190px;
+    height: 20px;
+    width: 100%;
 }
 
 .main{
@@ -320,6 +325,7 @@ body {
 
 .block {
     background-color: #fff;
+    margin: 0 0 10px 0;
     padding: 15px 6px 25px 6px;
     position: relative;
 }

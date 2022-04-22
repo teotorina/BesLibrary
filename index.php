@@ -19,6 +19,7 @@ include("header.php");
             </a>
         </div>
 
+
         <div class="swiper">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
@@ -111,12 +112,109 @@ include("header.php");
 
     </section>
 
+    <section class="block">
+        <div class="block__top">
+            <h2 class="block__title">
+                Новинки
+            </h2>
+            <a class="block__link" href="#">
+                Показать ещё
+            </a>
+        </div>
 
-    <!-- <div class="main__slider">
-                        <p class="main__slider-header">
-                            Популярное
-                        </p>
-                    </div> -->
+
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="block__wrapper-img">
+                        <img class="block__img" src="images/book-covers/garri-potter-3.jpg" alt="горе от ума">
+                    </div>
+                    <h3 class="block__book-title">
+                        Гарри Поттер и Узник Азкабана
+                    </h3>
+                    <p class="block__book-author">
+                        Дж.К.Роулинг
+                    </p>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="block__wrapper-img">
+                        <img class="block__img" src="images/book-covers/garri-potter-3.jpg" alt="горе от ума">
+                    </div>
+                    <h3 class="block__book-title">
+                        Гарри Поттер и Узник Азкабана
+                    </h3>
+                    <p class="block__book-author">
+                        Дж.К.Роулинг
+                    </p>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="block__wrapper-img">
+                        <img class="block__img" src="images/book-covers/garri-potter-3.jpg" alt="горе от ума">
+                    </div>
+                    <h3 class="block__book-title">
+                        Гарри Поттер и Узник Азкабана
+                    </h3>
+                    <p class="block__book-author">
+                        Дж.К.Роулинг
+                    </p>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="block__wrapper-img">
+                        <img class="block__img" src="images/book-covers/garri-potter-3.jpg" alt="горе от ума">
+                    </div>
+                    <h3 class="block__book-title">
+                        Гарри Поттер и Узник Азкабана
+                    </h3>
+                    <p class="block__book-author">
+                        Дж.К.Роулинг
+                    </p>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="block__wrapper-img">
+                        <img class="block__img" src="images/book-covers/garri-potter-3.jpg" alt="горе от ума">
+                    </div>
+                    <h3 class="block__book-title">
+                        Гарри Поттер и Узник Азкабана
+                    </h3>
+                    <p class="block__book-author">
+                        Дж.К.Роулинг
+                    </p>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="block__wrapper-img">
+                        <img class="block__img" src="images/book-covers/garri-potter-3.jpg" alt="горе от ума">
+                    </div>
+                    <h3 class="block__book-title">
+                        Гарри Поттер и Узник Азкабана
+                    </h3>
+                    <p class="block__book-author">
+                        Дж.К.Роулинг
+                    </p>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="block__wrapper-img">
+                        <img class="block__img" src="images/book-covers/garri-potter-3.jpg" alt="горе от ума">
+                    </div>
+                    <h3 class="block__book-title">
+                        Гарри Поттер и Узник Азкабана
+                    </h3>
+                    <p class="block__book-author">
+                        Дж.К.Роулинг
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+    </section>
+
 </main>
 
 <?php

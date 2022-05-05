@@ -14,6 +14,6 @@
             <option value="morePopular">Еще жанры</option>
         </select>
 
-        <input class="sidebar__menu-click" type="submit" value="Найти"></input>
+        <input class="sidebar__menu-click" type="submit" value="Найти">
     </form>
 </div>

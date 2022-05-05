@@ -26,7 +26,7 @@
                         <div class="header__content">
                             <div class="header__search-wrapper">
                                 <form class="header__search-form" name="search_form">
-                                    <input id="search" class="header__search" type="text" placeholder="Найти книгу">
+                                    <input class="header__search" id="search" type="text" placeholder="Найти книгу">
                                 </form>
                             </div>
 

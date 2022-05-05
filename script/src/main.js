@@ -1,6 +1,6 @@
 const swiper = new Swiper('.swiper', {
     // Optional parameters
-    slidesPerView: 5,
+    slidesPerView: 6,
     spaceBetween: 15,
   
     // Navigation arrows
@@ -8,5 +8,19 @@ const swiper = new Swiper('.swiper', {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
+
+    // responsive: {
+    //   320: {
+
+    //   },
+
+    //   768: {
+
+    //   },
+
+    //   1330: {
+
+    //   }
+    // }
   });
   

@@ -1,10 +1,10 @@
-images/book-covers/garri-potter-3.jpg
+images/book-covers/garry-potter-3.jpg
 Гарри Поттер и Узник Азкабана
 Дж.К.Роулинг
-images/book-covers/garri-potter-3.jpg
+images/book-covers/garry-potter-3.jpg
 Гарри Поттер и философский камень
 Дж.К.Роулинг
-images/book-covers/garri-potter-3.jpg
+images/book-covers/garry-potter-3.jpg
 Гарри Поттер и Тайная комната
 Дж.К.Роулинг
 images/book-covers/hronici_narnii.jpg

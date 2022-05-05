@@ -62,7 +62,7 @@ include("src/header.php");
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
                     <div class="block__wrapper-img">
-                        <img class="block__img" src="images/book-covers/garri-potter-3.jpg" alt="горе от ума">
+                        <img class="block__img" src="images/book-covers/garry-potter-3.jpg" alt="горе от ума">
                     </div>
                     <h3 class="block__book-title">
                         Гарри Поттер и Узник Азкабана
@@ -74,7 +74,7 @@ include("src/header.php");
 
                 <div class="swiper-slide">
                     <div class="block__wrapper-img">
-                        <img class="block__img" src="images/book-covers/garri-potter-3.jpg" alt="горе от ума">
+                        <img class="block__img" src="images/book-covers/garry-potter-3.jpg" alt="горе от ума">
                     </div>
                     <h3 class="block__book-title">
                         Гарри Поттер и Узник Азкабана
@@ -86,7 +86,7 @@ include("src/header.php");
 
                 <div class="swiper-slide">
                     <div class="block__wrapper-img">
-                        <img class="block__img" src="images/book-covers/garri-potter-3.jpg" alt="горе от ума">
+                        <img class="block__img" src="images/book-covers/garry-potter-3.jpg" alt="горе от ума">
                     </div>
                     <h3 class="block__book-title">
                         Гарри Поттер и Узник Азкабана
@@ -98,7 +98,7 @@ include("src/header.php");
 
                 <div class="swiper-slide">
                     <div class="block__wrapper-img">
-                        <img class="block__img" src="images/book-covers/garri-potter-3.jpg" alt="горе от ума">
+                        <img class="block__img" src="images/book-covers/garry-potter-3.jpg" alt="горе от ума">
                     </div>
                     <h3 class="block__book-title">
                         Гарри Поттер и Узник Азкабана
@@ -110,7 +110,7 @@ include("src/header.php");
 
                 <div class="swiper-slide">
                     <div class="block__wrapper-img">
-                        <img class="block__img" src="images/book-covers/garri-potter-3.jpg" alt="горе от ума">
+                        <img class="block__img" src="images/book-covers/garry-potter-3.jpg" alt="горе от ума">
                     </div>
                     <h3 class="block__book-title">
                         Гарри Поттер и Узник Азкабана
@@ -122,7 +122,7 @@ include("src/header.php");
 
                 <div class="swiper-slide">
                     <div class="block__wrapper-img">
-                        <img class="block__img" src="images/book-covers/garri-potter-3.jpg" alt="горе от ума">
+                        <img class="block__img" src="images/book-covers/garry-potter-3.jpg" alt="горе от ума">
                     </div>
                     <h3 class="block__book-title">
                         Гарри Поттер и Узник Азкабана
@@ -134,7 +134,7 @@ include("src/header.php");
 
                 <div class="swiper-slide">
                     <div class="block__wrapper-img">
-                        <img class="block__img" src="images/book-covers/garri-potter-3.jpg" alt="горе от ума">
+                        <img class="block__img" src="images/book-covers/garry-potter-3.jpg" alt="горе от ума">
                     </div>
                     <h3 class="block__book-title">
                         Гарри Поттер и Узник Азкабана

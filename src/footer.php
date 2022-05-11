@@ -6,7 +6,7 @@
                     <div class="footer__wrapper">
                         <div class="container">
                             <div class="footer__inner">
-                                <p class="footer__text">© BesLibrary 2022</p>
+                                <p class="footer__text">&copy; BesLibrary 2022</p>
                             </div>
                         </div>
                     </div>

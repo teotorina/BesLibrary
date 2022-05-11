@@ -1,5 +1,6 @@
 <?php
-include("src/header.php");
+    $title = "Популярные серии книг";
+    include("src/header.php");
 ?>
 
 <div class="sidebar__wrapper">
@@ -12,7 +13,7 @@ include("src/header.php");
 <main class="main">
     <div class="main__wrapper">
         <div class="main__header">
-            <h1 class="main__header-h1">Популярные серии книг</h1>
+            <h1>Популярные серии книг</h1>
         </div>
 
         <div class="book-series-item">

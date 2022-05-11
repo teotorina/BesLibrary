@@ -227,9 +227,9 @@ body {
     align-items: center;
 }
 
-.main__header-h1 {
-    text-transform: uppercase;
-    font-weight: 400;
+.main__header h1 {
+    text-transform: uppercase !important;
+    font-weight: 400 !important;
 }
 
 .book-series-item {
@@ -406,12 +406,22 @@ body {
     max-width: 160px;
     margin: 0 0 10px 25px;
     border-radius: 5px;
-    text-align: center;
+    /* text-align: center; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* position: relative; */
 }
 
 .book__read {
     background-color: #8BFBC5;
 }
+
+/* .book__read a {
+    position: absolute;
+   top: 50%;
+   transform: translate(0, -50%);
+} */
 
 .book__add {
     background-color: #fff;
@@ -459,7 +469,7 @@ p.book__info span {
 
 .description__text {
     font-size: 14px;
-    margin-bottom: 1em;
+    margin-bottom: 7px;
 }
 
 .book__content {

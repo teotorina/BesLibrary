@@ -1,4 +1,5 @@
 <?php
+    $title = "Гарри Поттер и филосовский камень";
     include("src/header.php");
 ?>
 
@@ -17,9 +18,16 @@
                     <img class="book__img" src="images/book-covers/garry-potter.jpg" alt="Тут должна быть картинка">
                 </div>
                 
-                <input class="book__read" value="Читать" readonly>
+                <div class="book__read">
+                    <a href="book_reader.php">Читать</a>
+                </div>
 
-                <input class="book__add" value="Добавить к себе" readonly>
+                <div class="book__add">
+                    <p>Добавить к себе</p>
+                </div>
+                <!-- <input class="book__read" value="Читать" readonly>
+
+                <input class="book__add" value="Добавить к себе" readonly> -->
             </div>
             
             <div class="book__right">

@@ -1,4 +1,5 @@
 <?php
+$title = "BesLibrary";
 include("src/header.php");
 ?>
 

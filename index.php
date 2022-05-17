@@ -33,6 +33,7 @@ include("src/header.php");
                     <div class="block__wrapper-img">
                         <img class="block__img" src="<?php echo fgets($file); ?>" alt="горе от ума">
                     </div>
+
                     <h3 class="block__book-title">
                         <?php echo fgets($file); ?>
                     </h3>

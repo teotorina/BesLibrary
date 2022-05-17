@@ -20,7 +20,7 @@
 
         <ul class="sidebar__menu-list">
             <li class="sidebar__menu-item">
-                <a class="sidebar__menu-link" href="#">
+                <a class="sidebar__menu-link <?php if ($_SERVER['REQUEST_URI'] == "/genre.php") echo "active"; ?>" href="genre.php">
                     Жанры
                 </a>
             </li>

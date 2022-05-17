@@ -32,6 +32,7 @@ body {
 .header__inner {
     height: 50px;
 }
+
 .header__content {
     max-width: 450px;
     width: 100%;
@@ -116,7 +117,7 @@ body {
     background-color: #fff;
 }
 
-.sidebar + .sidebar{
+.sidebar+.sidebar {
     margin-top: 15px;
 }
 
@@ -134,7 +135,7 @@ body {
     position: relative;
 }
 
-.sidebar__menu-item + .sidebar__menu-item {
+.sidebar__menu-item+.sidebar__menu-item {
     margin-top: 15px;
 }
 
@@ -142,7 +143,7 @@ body {
     content: "";
     position: absolute;
     top: 0;
-    left: 5px; 
+    left: 5px;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -180,7 +181,7 @@ body {
     width: 190px;
 }
 
-.find-book-form__input{
+.find-book-form__input {
     margin: 10px 0;
     padding-left: 4px;
     padding-right: 23px;
@@ -193,7 +194,7 @@ body {
     height: 20px;
 }
 
-.find-book-form__input[type = text]{
+.find-book-form__input[type=text] {
     margin-top: 0 !important;
     padding-left: 8px;
     border-radius: 20px;
@@ -212,7 +213,7 @@ body {
     width: 100%;
 }
 
-.main{
+.main {
     flex: 100%;
     padding-left: 10px;
 }
@@ -293,7 +294,7 @@ body {
     font-weight: 700;
 }
 
-.book-series-item-content__books-list{
+.book-series-item-content__books-list {
     margin-bottom: 25px;
 }
 
@@ -462,14 +463,17 @@ p.book__info span {
 
 .description,
 .content {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    margin-left: 20px;
     font-size: 16px;
     line-height: 19px;
 }
 
-.description__text {
+.description__text p {
+    text-align: justify;
+    text-indent: 20px;
     font-size: 14px;
-    margin-bottom: 7px;
+    padding-bottom: 15px;
 }
 
 .book__content {
@@ -478,6 +482,57 @@ p.book__info span {
 }
 
 li.content__item {
+    text-indent: 20px;
     list-style-type: none;
-    margin-top: 5px;
+    margin-top: 7px;
+}
+
+li.content__item span {
+    font-weight: bold;
+}
+
+.reader__block {
+    padding: 25px;
+}
+
+h1.reader__block-name {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 21px;
+    padding-left: 20px;
+    margin-bottom: 15px;
+}
+
+h2.reader__block-author,
+h2.reader__block-chapter {
+    font-size: 16px;
+    line-height: 19px;
+    padding-left: 20px;
+    margin-bottom: 15px;
+}
+
+.reader__block p {
+    text-indent: 20px;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+section.genre__block {
+    background-color: #fff;
+    margin: 0 0 10px 0;
+    padding: 15px 25px;
+    position: relative;
+}
+
+h2.genre__title {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 21px;
+    margin-bottom: 15px;
+}
+
+ul.genre__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    grid-gap: 6px;
 }

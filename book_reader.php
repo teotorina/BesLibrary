@@ -32,6 +32,8 @@
                         WHERE chapter.book_id = {$book_id} AND chapter.number = {$chapter_num};";
 
             $query_result = mysqli_query($connection, $request);
+            if($query_result == false)
+                echo "ffff";
             $query_array = $query_result->fetch_row();
 
             $book_title = $query_array[0];

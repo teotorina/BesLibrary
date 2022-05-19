@@ -536,3 +536,9 @@ ul.genre__list {
     grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
     grid-gap: 6px;
 }
+
+.next__chapter {
+    width: 150px;
+    height: 20px;
+    background-color: #8BFBC5;
+}

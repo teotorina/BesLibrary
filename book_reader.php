@@ -14,15 +14,17 @@
 <main class="main">
     <div class="main__wrapper reader">
         <?php
-            $book_id = $_GET["book_id"];
-            $chapter_num = $_GET["chapter_num"];
-
-            if(isset($book_id) == false || isset($chapter_num) == false)
+            if (isset($_GET["book_id"]))
             {
-                exit(1);
+                $book_id = $_GET["book_id"];
             }
 
-            $connection = mysqli_connect('127.0.0.1', 'connection', '1', 'bes_library');
+            if (isset($_GET["chapter_num"]))
+            {
+                $chapter_num = $_GET["chapter_num"];
+            }
+
+            require "connect.php";
 
             $request = "SELECT book.title, chapter.title, chapter.number, chapter.text_link, author.name FROM chapter 
                         JOIN book ON book.id = chapter.book_id
@@ -38,7 +40,7 @@
             $chapter_text_link = $query_array[3];
             $author_name = $query_array[4];
             
-            $file_path = __DIR__ . '\\' . $chapter_text_link;
+            $file_path = __DIR__ . '\\chapters\\' . $chapter_text_link;
 
             $text = file_get_contents($file_path);
 

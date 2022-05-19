@@ -19,7 +19,7 @@ include("src/header.php");
                 </div>
 
                 <div class="book__read">
-                    <a href="book_reader.php">Читать</a>
+                    <a href="book_reader.php?book_id=1&chapter_num=1">Читать</a>
                 </div>
 
                 <div class="book__add">

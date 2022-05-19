@@ -55,20 +55,20 @@
             <?php echo $text; ?>
 
             <div class="reader__block-bottom">
+                <?php 
+                    $next_chapter = $chapter_num + 1;
+                    $request = "SELECT * FROM chapter WHERE number = {$next_chapter} AND book_id = {$book_id}";
+                    $query_result = mysqli_query($connection, $request);
+                    $next_chapter_link = "#";
+                    if($query_result->num_rows != 0)
+                    {
+                        $next_chapter_link = "book_reader.php?book_id=" . $book_id . "&chapter_num=" . $next_chapter;
+                ?>
                 <div class="next__chapter">
-                    <?php 
-                        $next_chapter = $chapter_num + 1;
-                        $request = "SELECT * FROM chapter WHERE number = {$next_chapter} AND book_id = {$book_id}";
-                        $query_result = mysqli_query($connection, $request);
-
-                        $next_chapter_link = "#";
-                        if($query_result->num_rows != 0)
-                        {
-                            $next_chapter_link = "book_reader.php?book_id=" . $book_id . "&chapter_num=" . $next_chapter;   
-                        }
-                    ?>
+                    
                     <a href="<?php echo $next_chapter_link; ?>">Следующая глава</a>
                 </div>
+                <?php } ?>
             </div>
         </div>
         

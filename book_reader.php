@@ -14,32 +14,58 @@
 <main class="main">
     <div class="main__wrapper reader">
         <?php
-            $book_id = 1;
+            $book_id = $_GET["book_id"];
+            $chapter_num = $_GET["chapter_num"];
+
+            if(isset($book_id) == false || isset($chapter_num) == false)
+            {
+                exit(1);
+            }
 
             $connection = mysqli_connect('127.0.0.1', 'connection', '1', 'bes_library');
 
-            $request = "SELECT title, number, text_link FROM chapter WHERE book_id = {$book_id}";
+            $request = "SELECT book.title, chapter.title, chapter.number, chapter.text_link, author.name FROM chapter 
+                        JOIN book ON book.id = chapter.book_id
+                        JOIN author ON author.id = book.author_id
+                        WHERE chapter.book_id = {$book_id} AND chapter.number = {$chapter_num};";
 
             $query_result = mysqli_query($connection, $request);
             $query_array = $query_result->fetch_row();
+
+            $book_title = $query_array[0];
+            $chapter_title = $query_array[1];
+            $chapter_number = $query_array[2];
+            $chapter_text_link = $query_array[3];
+            $author_name = $query_array[4];
             
-            $file_path = __DIR__ . '\\' . $query_array[2];
+            $file_path = __DIR__ . '\\' . $chapter_text_link;
 
             $text = file_get_contents($file_path);
 
         ?>
         <div class="reader__block">
-            <h1 class="reader__block-name"><?php echo $query_array[0]; ?></h1>
+            <h1 class="reader__block-name"><?php echo $chapter_title; ?></h1>
 
-            <h2 class="reader__block-author">Дж.К.Роулинг</h2>
+            <h2 class="reader__block-author"><?php echo $author_name; ?></h2>
 
-            <h2 class="reader__block-chapter">Глава 1. Мальчик, который выжил</h2>
+            <h2 class="reader__block-chapter">Глава <?php echo $chapter_num; ?>. <?php echo $chapter_title; ?></h2>
 
             <?php echo $text; ?>
 
             <div class="reader__block-bottom">
                 <div class="next__chapter">
-                    <a href="#">Следующая глава</a>
+                    <?php 
+                        $next_chapter = $chapter_num + 1;
+                        $request = "SELECT * FROM chapter WHERE number = {$next_chapter} AND book_id = {$book_id}";
+                        $query_result = mysqli_query($connection, $request);
+
+                        $next_chapter_link = "#";
+                        if($query_result->num_rows != 0)
+                        {
+                            $next_chapter_link = "book_reader.php?book_id=" . $book_id . "&chapter_num=" . $next_chapter;   
+                        }
+                    ?>
+                    <a href="<?php echo $next_chapter_link; ?>">Следующая глава</a>
                 </div>
             </div>
         </div>

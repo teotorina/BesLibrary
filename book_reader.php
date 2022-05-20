@@ -19,9 +19,9 @@
                 $book_id = $_GET["book_id"];
             }
 
-            if (isset($_GET["chapter_num"]))
+            if (isset($_GET["chapter"]))
             {
-                $chapter_num = $_GET["chapter_num"];
+                $chapter_num = $_GET["chapter"];
             }
 
             require "connect.php";
@@ -33,7 +33,9 @@
 
             $query_result = mysqli_query($connection, $request);
             if($query_result == false)
-                echo "ffff";
+            {
+                die(mysqli_error($connection));
+            }
             $query_array = $query_result->fetch_row();
 
             $book_title = $query_array[0];

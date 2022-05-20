@@ -1,4 +1,5 @@
 <?php
+    session_start();
     include("connect.php");
 
     $book_id = $_GET["book_id"];
@@ -98,7 +99,7 @@ include("src/header.php");
                 </p>
 
                 <p class="book__info">
-                    <span>Дата издания:</span> <?php echo $book_release_date; ?>
+                    <span>Дата издания:</span> <?php echo idate('Y', $book_release_date) ?>
                 </p>
 
                 <p class="book__info">

@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 $nick = $_POST['nick'];
 $pass = $_POST['password'];
@@ -11,7 +12,7 @@ else {
     include("../connect.php");
 
     //получаем пароль для данного логина, если ответ пустой - такого пользователя не существует, если не подходит пароль - неверный пароль
-    $lodin_request = "SELECT user.password FROM user WHERE user.nick = '{$nick}';";
+    $lodin_request = "SELECT user.password, user.id FROM user WHERE user.nick = '{$nick}';";
 
     $login_result = mysqli_query($connection, $lodin_request);
 
@@ -32,6 +33,11 @@ else {
         else
         {
             echo "Верный пароль";
+
+            // Создание сессии
+            $_SESSION['user_id'] = $login_array[1];
+            
+            header("location: /user_page.php");
         }
     }
 }

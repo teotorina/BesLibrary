@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 $nick = trim($_POST['nick']);
 $pass1 = $_POST['password'];

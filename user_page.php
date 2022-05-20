@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 $title = "Страница пользователя";
 include("src/header.php");
 ?>
@@ -12,6 +14,9 @@ include("src/header.php");
 
 <main class="main">
 
+<?php
+echo $_SESSION['user_id'];
+?>
 </main>
 
 

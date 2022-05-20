@@ -36,7 +36,10 @@
                         </a> 
                     </li>
                     <li class="book-series-item-content__book">
-                        Гарри Поттер и Тайная комната
+                    <a class="book__link" href="book.php?book_id=2">
+                    Гарри Поттер и Тайная комната
+                        </a>
+                        
                     </li>
                     <li class="book-series-item-content__book">
                         Гарри Поттер и узник Азкабана

@@ -402,7 +402,6 @@ body {
 
 .book__read,
 .book__add {
-    display: block;
     height: 25px;
     max-width: 160px;
     margin: 0 0 10px 25px;
@@ -537,8 +536,72 @@ ul.genre__list {
     grid-gap: 6px;
 }
 
+.reader__block-bottom {
+    object-fit: contain;
+    position: relative;
+    padding-bottom: 25px;
+}
+
+.previous__chapter,
 .next__chapter {
-    width: 150px;
-    height: 20px;
+    width: 140px;
+    height: 25px;
     background-color: #8BFBC5;
+    max-width: 160px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+
+.previous__chapter {
+    left: 0;
+}
+
+.next__chapter {
+    right: 0;
+}
+
+.block__login,
+.block__regist {
+    padding: 25px;
+    position: relative;
+}
+
+h1.block__login-h1,
+h1.block__regist-h1 {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 30px;
+    padding-left: 20px;
+    margin-bottom: 30px;
+}
+
+.login__wrapper,
+.regist__wrapper {
+width: fit-content;
+    margin: auto;
+}
+
+.login__wrapper input,
+.regist__wrapper input {
+    width: 200px;
+    height: 25px;
+    border-radius: 5px;
+    background-color: rgba(139, 251, 197, 0.3);
+    margin-bottom: 20px;
+    padding: 0 10px;
+}
+
+.login__wrapper p,
+.regist__wrapper p {
+    font-size: 16px;
+    line-height: 19px;
+    margin-bottom: 15px;
+}
+
+input.form__buttom {
+    margin-top: 20px;
+    background-color: rgba(139, 251, 197);
 }

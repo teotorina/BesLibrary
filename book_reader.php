@@ -50,7 +50,7 @@
 
         ?>
         <div class="reader__block">
-            <h1 class="reader__block-name"><?php echo $chapter_title; ?></h1>
+            <h1 class="reader__block-name"><?php echo $book_title; ?></h1>
 
             <h2 class="reader__block-author"><?php echo $author_name; ?></h2>
 
@@ -59,6 +59,23 @@
             <?php echo $text; ?>
 
             <div class="reader__block-bottom">
+            
+                <?php 
+                    $next_chapter = $chapter_num - 1;
+                    $request = "SELECT * FROM chapter WHERE number = {$next_chapter} AND book_id = {$book_id}";
+                    $query_result = mysqli_query($connection, $request);
+                    $next_chapter_link = "#";
+                    if($query_result->num_rows != 0)
+                    {
+                        $next_chapter_link = "book_reader.php?book_id=" . $book_id . "&chapter=" . $next_chapter;
+                ?>
+                <div class="previous__chapter">
+                    
+                    <a href="<?php echo $next_chapter_link; ?>">Предыдущая глава</a>
+                </div>
+                <?php } ?>
+
+
                 <?php 
                     $next_chapter = $chapter_num + 1;
                     $request = "SELECT * FROM chapter WHERE number = {$next_chapter} AND book_id = {$book_id}";
@@ -66,13 +83,14 @@
                     $next_chapter_link = "#";
                     if($query_result->num_rows != 0)
                     {
-                        $next_chapter_link = "book_reader.php?book_id=" . $book_id . "&chapter_num=" . $next_chapter;
+                        $next_chapter_link = "book_reader.php?book_id=" . $book_id . "&chapter=" . $next_chapter;
                 ?>
                 <div class="next__chapter">
                     
                     <a href="<?php echo $next_chapter_link; ?>">Следующая глава</a>
                 </div>
                 <?php } ?>
+
             </div>
         </div>
         

@@ -34,7 +34,15 @@
                                 <img class="header__notification-img" src="images/icons/notification.svg" alt="Уведомления">
                             </button>
 
-                            <button class="header__user-btn">
+
+                            <script>
+                            function test()
+                            {
+                                location.assign("/login.php");
+                            }
+                            </script>
+
+                            <button class="header__user-btn" onclick="test()">
                                 <img class="header__user-img" src="images/icons/user.svg" alt="Пользователь">
                             </button>
                         </div>

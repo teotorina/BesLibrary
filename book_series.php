@@ -31,7 +31,7 @@
 
                 <ol class="book-series-item-content__books-list book-series-item-content__text">
                     <li class="book-series-item-content__book">
-                        <a class="book__link" href="book.php">
+                        <a class="book__link" href="book.php?book_id=1">
                             Гарри Поттер и философский камень
                         </a> 
                     </li>

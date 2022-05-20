@@ -80,8 +80,16 @@ include("src/header.php");
                     <?php echo $author_name; ?>
                 </a>
 
+                <?php 
+                    $genres_string = $genres_array[0][0];
+                    for($i = 1; $i < $genres_query->num_rows; $i++)
+                    {
+                        $genres_string = $genres_string . ', '.$genres_array[$i][0];
+                    }
+                ?>
+
                 <p class="book__info">
-                    <span>Жанры:</span> <?php echo implode(', ', $genres_array); ?>
+                    <span>Жанры:</span> <?php echo $genres_string; ?>
                 </p>
 
                 <p class="book__info">

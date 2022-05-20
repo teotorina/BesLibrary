@@ -1,16 +1,4 @@
 <?php
-$title = "Гарри Поттер и филосовский камень";
-include("src/header.php");
-?>
-
-
-<div class="sidebar__wrapper">
-    <?php
-    include("src/menu.php");
-    ?>
-</div>
-
-<?php
     include("connect.php");
 
     $book_id = $_GET["book_id"];
@@ -49,6 +37,19 @@ include("src/header.php");
     $genres_query = mysqli_query($connection, $genres_request);
     $genres_array = $genres_query->fetch_all();
 ?>
+
+<?php
+$title = $book_title;
+include("src/header.php");
+?>
+
+
+<div class="sidebar__wrapper">
+    <?php
+    include("src/menu.php");
+    ?>
+</div>
+
 
 <main class="main">
     <div class="main__wrapper">

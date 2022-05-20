@@ -19,7 +19,7 @@ include("src/header.php");
             </ul>
 
             <div class="regist__wrapper">
-                <form class="regist__form" action="registration_procedure.php" method="post">
+                <form class="regist__form" action="src/registration_procedure.php" method="post">
                     <p>Введите имя:</p>
 
                     <input type="text" name="nick">

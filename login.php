@@ -19,7 +19,7 @@ include("src/header.php");
             </ul>
 
             <div class="login__wrapper">
-                <form class="login__form" action="login_procedure.php" method="post">
+                <form class="login__form" action="src/login_procedure.php" method="post">
 
                     <p>Введите имя:</p>
 
@@ -34,7 +34,7 @@ include("src/header.php");
 
                 </form>
             </div>
-            
+
         </div>
 
     </div>

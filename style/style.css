@@ -580,7 +580,7 @@ h1.block__regist-h1 {
 
 .login__wrapper,
 .regist__wrapper {
-width: fit-content;
+    width: fit-content;
     margin: auto;
 }
 
@@ -604,4 +604,23 @@ width: fit-content;
 input.form__buttom {
     margin-top: 20px;
     background-color: rgba(139, 251, 197);
+}
+
+ul.login__regist {
+    margin-bottom: 30px;
+}
+
+li.login__regist-item {
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 18px;
+    line-height: 21px;
+    margin: 0 25px;
+    font-weight: bold;
+}
+
+li.login__regist-item.active {
+    /* font-weight: bold; */
+    border-bottom: 2px solid #000;
 }

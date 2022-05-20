@@ -12,9 +12,11 @@ include("src/header.php");
 <main class="main">
     <div class="main__wrapper">
         <div class="block__regist">
-            <h1 class="block__regist-h1">
-                Регистрация аккаунта
-            </h1>
+
+            <ul class="login__regist">
+                <li class="login__regist-item"><a href="login.php">Войти</a></li>
+                <li class="login__regist-item active"><a href="registration.php">Зарегистрироваться</a></li>
+            </ul>
 
             <div class="regist__wrapper">
                 <form class="regist__form" action="registration_procedure.php" method="post">
@@ -24,11 +26,11 @@ include("src/header.php");
 
                     <p>Введите пароль:</p>
 
-                    <input type="text" name="password">
+                    <input type="password" name="password">
 
                     <p>Введите пароль повторно:</p>
 
-                    <input type="text" name="password_repetition">
+                    <input type="password" name="password_repetition">
 
                     <br>
                     <input class="form__buttom" type="submit" value="Зарегистрироваться">

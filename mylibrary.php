@@ -1,5 +1,6 @@
 <?php
 session_start();
+
 $title = "BesLibrary";
 include("src/header.php");
 ?>
@@ -13,14 +14,12 @@ include("src/header.php");
 <main class="main">
     <div class="main__wrapper">
     <div class="block__mylib">
-            <div class="mylib__top">
-                <h2 class="mylib__top-title">
-                    Моя библиотека
-                </h2>
-            </div>
+            <h2 class="mylib__top-title">
+                Моя библиотека
+            </h2>
             
             <?php
-                for($i = 0; $i <3; $i++)
+                for($i = 0; $i < 3; $i++)
                 {
                     ?>
                         <div class="mylib__content">

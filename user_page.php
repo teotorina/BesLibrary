@@ -14,7 +14,6 @@
 <main class="main">
     <div class="main__wrapper">
         <div class="block__nick">
-            <!-- Ник жирненько, полоса, Блок: моя библиотека (до 3 книг, сбоку ссылка на показать всё), Блок: мои комментарии, кнопка: "выйти из аккаунта" -->
             <h2 class="nick">
                 <?php
 
@@ -40,49 +39,19 @@
         </div>
 
         <div class="block__mylib">
-            <div class="mylib__top">
-                <h2 class="mylib__top-title">
-                    Моя библиотека
-                </h2>
-
-                
-                <script>
-                function mylib_click()
-                {
-                    <?php
-                        if(isset($_SESSION['user_id']))
-                        {
-                            echo 'var session_user=1;';
-                        }
-                        else
-                        {
-                            echo 'var session_user=0;';
-                        }
-                    ?>
-                    if(session_user)
-                    {
-                        location.assign("mylibrary.php");
-                    }
-                    else
-                    {
-                        location.assign("login.php");
-                    }
-                }
-                </script>
-
-                <a class="mylib__top-link" href="#" onclick="mylib_click()">
-                    Показать всё
-                </a>
-            </div>
+            <h2 class="mylib__top-title">
+                Моя библиотека
+            </h2>
             
-            <?php
-                for($i = 0; $i <3; $i++)
+            <div class="mylib__wrapper">
+                <?php
+                for($i = 0; $i < 3; $i++)
                 {
                     ?>
                         <div class="mylib__content">
                             <div class="mylib__left">
                                 <div class="mylib__img-wrapper">
-                                    <img src="images/book-covers/hronici_narnii.jpg" alt="Тут должна быть картинка">
+                                    <img src="images/book-covers/hronici_narnii-1.jpg" alt="Тут должна быть картинка">
                                 </div>
                             
                                 <div class="mylib__read">
@@ -110,14 +79,71 @@
                         </div>
                     <?php
                 }
-            ?>
+                ?>
+            </div>
             
+            
+            <script>
+            function mylib_click()
+            {
+                <?php
+                    if(isset($_SESSION['user_id']))
+                    {
+                        echo 'var session_user=1;';
+                    }
+                    else
+                    {
+                        echo 'var session_user=0;';
+                    }
+                ?>
+                if(session_user)
+                {
+                    location.assign("mylibrary.php");
+                }
+                else
+                {
+                    location.assign("login.php");
+                }
+            }
+            </script>
 
-
+            <div class="mylib__button">
+                <a href="#" onclick="mylib_click()">Показать всё</a>
+            </div>
 
         </div>
 
+        <div class="block__comments">
+            <h2 class="comments__top-title">
+                Мои комментарии
+            </h2>
+            
+            
+            <?php
+            for($i = 0; $i < 3; $i++)
+            {
+                ?>
+                <div class="comments__wrapper">
+                    <p class="comments__book">
+                        <span>О книге: </span>Хроники Нарнии - Клайв Льюис
+                    </p>
 
+                    <p class="comments__date">
+                        15 сентября 2021
+                    </p>
+
+                    <div class="comments__text">
+                        <p>Ну норм вроде книга. Ну норм вроде книга. Ну норм вроде книга. Ну норм вроде книга. Ну норм вроде книга. Ну норм вроде книга. Ну норм вроде книга. Ну норм вроде книга. Ну норм вроде книга. Ну норм вроде книга. Ну норм вроде книга. Ну норм вроде книга. Ну норм вроде книга. Ну норм вроде книга. Ну норм вроде книга. Ну норм вроде книга. Ну норм вроде книга. Ну норм вроде книга. Ну норм вроде книга. Ну норм вроде книга. Ну норм вроде книга. Ну норм вроде книга. </p>
+                    </div>
+                </div>
+                <?php
+            }
+            ?>
+        </div>
+
+        <div class="exit__button">
+            <p>Выйти</p>
+        </div>
     </div>
 </main>
 

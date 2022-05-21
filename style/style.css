@@ -634,24 +634,28 @@ h2.nick {
 }
 
 .block__mylib {
-    padding: 20px 25px;
+    margin: 0 25px;
+    padding: 20px 0;
+    border-bottom: 2px solid #000;
 }
-
+/* 
 .mylib__top {
     display: flex;
     justify-content: space-between;
     padding: 0 10px;
     margin-bottom: 10px;
-}
+} */
 
 h2.mylib__top-title {
     font-size: 18px;
     line-height: 21px;
+    padding: 0 10px;
+    margin-bottom: 10px;
 }
 
-a.mylib__top-link {
+/* a.mylib__top-link {
     color: #5CB48A;
-}
+} */
 
 .mylib__content {
     display: flex;
@@ -679,6 +683,7 @@ a.mylib__top-link {
     display: flex;
     justify-content: center;
     align-items: center;
+    
     background-color: #8BFBC5;
 }
 
@@ -704,3 +709,73 @@ h2.mylib__description {
     font-size: 16px;
     line-height: 19px;
 }
+
+.mylib__button {
+    margin-top: 10px;
+    padding-left: 10px;
+    color: #5CB48A;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.mylib__button a {
+    border-bottom: 1px solid #5CB48A;
+}
+
+.block__comments {
+    margin: 0 25px;
+    padding: 20px 0;
+    border-bottom: 2px solid #000;
+}
+
+h2.comments__top-title {
+    font-size: 18px;
+    line-height: 21px;
+    padding: 0 10px;
+    margin-bottom: 10px;
+}
+
+.comments__wrapper {
+    padding: 10px;
+    border-bottom: 2px solid rgba(25, 155, 93, 0.2);
+}
+
+.comments__wrapper:last-child {
+    border-bottom: none;
+}
+
+p.comments__book,
+p.comments__date {
+    display: inline-block;
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
+
+p.comments__book span {
+    font-weight: bold;
+}
+
+p.comments__date {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.comments__text p {
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.exit__button {
+    padding: 20px 35px;
+}
+
+.exit__button p {
+    background-color: red;
+    width: 120px;
+    height: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+

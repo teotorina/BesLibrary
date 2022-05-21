@@ -130,7 +130,7 @@
             }
             </script>
 
-            <div class="mylib__button">
+            <div class="mylib__button" <?php if($mylib_result->num_rows == 0) echo "hidden"; ?>>
                 <a href="#" onclick="mylib_click()">Показать всё</a>
             </div>
 

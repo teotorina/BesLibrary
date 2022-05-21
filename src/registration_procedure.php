@@ -39,6 +39,40 @@ else
     }
     else
     {
-        // Здесь надо зарегать
+        $regist_request = "INSERT INTO `user`(`nick`, `password`) VALUES ('{$nick}','{$pass1}')";
+        $regist_result = mysqli_query($connection, $regist_request);
+
+
+        $check1_request = "SELECT IF(COUNT(*) > 0, 'true', 'false')
+                                FROM user
+                                WHERE user.nick = '{$nick}';";
+
+        $check2_request = "SELECT user.id
+                            FROM user
+                            WHERE user.nick = '{$nick}';";
+
+        $check1_result = mysqli_query($connection, $check1_request);
+        if($check1_result->num_rows == 0)
+        {
+            echo "Ошибка";
+        }
+        $check1_array = $check1_result->fetch_row();
+        if ($check1_array[0] == 'false')
+        {
+            echo "Ошибка регистрации";
+        }
+        else
+        {
+            $check2_result = mysqli_query($connection, $check2_request);
+            if($check2_result->num_rows == 0)
+            {
+                echo "Ошибка";
+            }
+            $check2_array = $check2_result->fetch_row();
+
+            $_SESSION['user_id'] = $check2_array[0];
+            
+            header("location: /user_page.php");
+        }
     }
 }

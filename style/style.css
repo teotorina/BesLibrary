@@ -484,6 +484,48 @@ li.content__item span {
     font-weight: bold;
 }
 
+.book__comments {
+    margin: 0 25px;
+    padding-bottom: 25px;
+}
+
+.book__comments-title {
+    margin: 15px 20px;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.book__comments-wrapper {
+    padding-top: 10px;
+    border-bottom: 2px solid rgba(25, 155, 93, 0.2);
+}
+
+.book__comments .book__comments-wrapper:last-child {
+    border-bottom: none !important;
+}
+
+.book__comments-name,
+.book__comments-date {
+    padding-right: 10px;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.book__comments-name {
+    padding-left: 20px;
+}
+
+.book__comments-date {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.book__comments-text p {
+    text-align: justify;
+    text-indent: 20px;
+    font-size: 14px;
+    padding-bottom: 15px;
+}
+
 .reader__block {
     padding: 25px;
 }

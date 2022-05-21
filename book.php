@@ -60,16 +60,15 @@ include("src/header.php");
                     <img class="book__img" src="images/book-covers/<?php echo $book_cover_link; ?>" alt="Тут должна быть картинка">
                 </div>
 
-                <div class="book__read">
-                    <a href="book_reader.php?book_id=<?php echo $book_id; ?>&chapter=1">Читать</a>
-                </div>
-
+                <a href="book_reader.php?book_id=<?php echo $book_id; ?>&chapter=1">
+                    <div class="book__read">
+                        <p>Читать</p>
+                    </div>
+                </a>
+                
                 <div class="book__add">
                     <p>Добавить к себе</p>
                 </div>
-                <!-- <input class="book__read" value="Читать" readonly>
-
-                <input class="book__add" value="Добавить к себе" readonly> -->
             </div>
 
             <div class="book__right">
@@ -107,7 +106,20 @@ include("src/header.php");
                 </p>
 
                 <p class="book__info">
-                    <span>Добавлений:</span> 0
+                    <span>Добавлений: </span>
+                    <?php
+                        $add_request = "SELECT COUNT(*) FROM personal_library
+                                        GROUP BY personal_library.book_id
+                                        HAVING personal_library.book_id = {$book_id};";
+
+                        $add_result = mysqli_query($connection, $add_request);
+                        if ($add_result->num_rows == 0)
+                        {
+                            echo 0;
+                        }
+                        $add_array = $add_result->fetch_row();
+                        echo $add_array[0];
+                    ?>
                 </p>
             </div>
         </div>
@@ -147,6 +159,49 @@ include("src/header.php");
                 </li>
                 <?php } ?>
             </ol>
+        </div>
+
+        <div class="book__comments">
+            <h2 class="book__comments-title">
+                Комментарии
+            </h2>
+
+            <!-- Имя пользователя, дата написания, текст комментария -->
+            <?php
+            $comments_request = "SELECT u.nick, c.date, c.text
+                                FROM comments c
+                                JOIN user u ON u.id = c.user_id
+                                WHERE c.book_id = {$book_id};";
+
+            $comments_resutl = mysqli_query($connection, $comments_request);
+            if($comments_resutl->num_rows == 0)
+            {
+                echo 'Комментариев нет';
+            }
+
+            $comments_array = $comments_resutl->fetch_all();
+
+            for ($i = 0; $i < $comments_resutl->num_rows; $i++)
+            {
+                ?>
+
+                <div class="book__comments-wrapper">
+                    <p class="book__comments-name">
+                        <?php echo $comments_array[$i][0]; ?>
+                    </p>
+                    <p class="book__comments-date">
+                        <?php echo date('d.m.Y', strtotime($comments_array[$i][1])); ?>
+                    </p>
+                    <div class="book__comments-text">
+                        <?php echo $comments_array[$i][2] ?>
+                    </div>
+                </div>
+
+                <?php
+            }
+            ?>
+
+
         </div>
     </div>
 </main>

@@ -17,11 +17,9 @@
             <h2 class="nick">
                 <?php
 
-                    // unset($_SESSION['user_id']);
-
                     include("src/connect.php");
                     
-                    $nick_request = "SELECT nick FROM user WHERE id = '{$_SESSION['user_id']}';";
+                    $nick_request = "SELECT nick FROM user WHERE id = {$_SESSION['user_id']};";
 
                     $nick_result = mysqli_query($connection, $nick_request);
 
@@ -45,27 +43,52 @@
             
             <div class="mylib__wrapper">
                 <?php
-                for($i = 0; $i < 3; $i++)
+
+                $mylib_request = "SELECT b.id, b.title, a.name, b.cover_link, b.description, pl.last_chapter
+                                FROM book b
+                                JOIN author a ON a.id = b.author_id
+                                JOIN personal_library pl ON pl.book_id = b.id AND pl.user_id = {$_SESSION['user_id']};";
+
+                $mylib_result = mysqli_query($connection, $mylib_request);
+
+                if($mylib_result->num_rows == 0)
+                {
+                    echo "Вы не добавили ни одной книги в личную библиотеку";
+                }
+
+                $mylib_array = $mylib_result->fetch_all();
+
+                ?>
+                <script>
+                    function book_info_click(temp_book_id)
+                    {
+                        location.assign(`book.php?book_id=${temp_book_id}`);
+                    }
+                </script>
+                <?php
+
+                for($i = 0; $i < 3 && $i < $mylib_result->num_rows; $i++)
                 {
                     ?>
                         <div class="mylib__content">
                             <div class="mylib__left">
                                 <div class="mylib__img-wrapper">
-                                    <img src="images/book-covers/hronici_narnii-1.jpg" alt="Тут должна быть картинка">
+                                    <img src="images/book-covers/<?php echo $mylib_array[$i][3] ?>" alt="Тут должна быть картинка">
                                 </div>
                             
                                 <div class="mylib__read">
-                                    <a href="#">Читать</a>
+                                    <a href="book_reader.php?book_id=<?php echo $mylib_array[$i][0];?>&
+                                    chapter=<?php if($mylib_array[$i][5] <= 0) echo '1'; else echo $mylib_array[$i][5];?>">Читать</a>
                                 </div>
                             </div>
                             
                             <div class="mylib__right">
-                                <h2 class="mylib__book-title">
-                                    Хроники Нарнии
+                                <h2 class="mylib__book-title" onclick="book_info_click(<?php echo $mylib_array[$i][0];?>)">
+                                    <?php echo $mylib_array[$i][1] ?>
                                 </h2>
                             
                                 <a href="#" class="mylib__book-author">
-                                    Льюис
+                                    <?php echo $mylib_array[$i][2] ?>
                                 </a>
                                 
                                 <h2 class="mylib__description">
@@ -73,7 +96,7 @@
                                 </h2>
                             
                                 <div class="mylib__description-text">
-                                    <p>Описание этой книжки.</p>
+                                    <?php echo $mylib_array[$i][4] ?>
                                 </div>
                             </div>
                         </div>
@@ -120,20 +143,37 @@
             
             
             <?php
-            for($i = 0; $i < 3; $i++)
+
+            // Получить айди книги (для ссылки), название книги, имя автора, дата написания комментария, текст комментария
+            $comments_request = "SELECT b.id, b.title, a.name, c.date, c.text
+                                FROM comments c
+                                JOIN book b ON b.id = c.book_id
+                                JOIN author a ON a.id = b.author_id
+                                WHERE c.user_id = {$_SESSION['user_id']};";
+
+            $comments_result = mysqli_query($connection, $comments_request);
+
+            if($comments_result->num_rows == 0)
+            {
+                echo "Вы не оставили ни одного комментария";
+            }
+
+            $comments_array = $comments_result->fetch_all();
+
+            for($i = 0; $i < $comments_result->num_rows; $i++)
             {
                 ?>
                 <div class="comments__wrapper">
                     <p class="comments__book">
-                        <span>О книге: </span>Хроники Нарнии - Клайв Льюис
+                        <span>О книге: </span><a href="book.php?book_id=<?php echo $comments_array[$i][0]; ?>"><?php echo $comments_array[$i][1]; ?></a> &mdash; <?php echo $comments_array[$i][2]; ?>
                     </p>
 
                     <p class="comments__date">
-                        15 сентября 2021
+                        <?php echo date('d.m.Y', strtotime($comments_array[$i][3])); ?>
                     </p>
 
                     <div class="comments__text">
-                        <p>Ну норм вроде книга. Ну норм вроде книга. Ну норм вроде книга. Ну норм вроде книга. Ну норм вроде книга. Ну норм вроде книга. Ну норм вроде книга. Ну норм вроде книга. Ну норм вроде книга. Ну норм вроде книга. Ну норм вроде книга. Ну норм вроде книга. Ну норм вроде книга. Ну норм вроде книга. Ну норм вроде книга. Ну норм вроде книга. Ну норм вроде книга. Ну норм вроде книга. Ну норм вроде книга. Ну норм вроде книга. Ну норм вроде книга. Ну норм вроде книга. </p>
+                        <?php echo $comments_array[$i][4]; ?>
                     </div>
                 </div>
                 <?php
@@ -141,9 +181,12 @@
             ?>
         </div>
 
-        <div class="exit__button">
-            <p>Выйти</p>
-        </div>
+        <a href="src/exit.php">
+            <div class="exit__button">
+                <p>Выйти</p>
+            </div>
+        </a>
+        
     </div>
 </main>
 

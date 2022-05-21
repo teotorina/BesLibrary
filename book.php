@@ -99,7 +99,7 @@ include("src/header.php");
                 </p>
 
                 <p class="book__info">
-                    <span>Дата издания:</span> <?php echo idate('Y', $book_release_date) ?>
+                    <span>Год издания:</span> <?php echo idate('Y', $book_release_date) ?>
                 </p>
 
                 <p class="book__info">

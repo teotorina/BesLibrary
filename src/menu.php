@@ -1,3 +1,27 @@
+<script>
+function mylib_click()
+{
+    <?php
+        if(isset($_SESSION['user_id']))
+        {
+            echo 'var session_user=1;';
+        }
+        else
+        {
+            echo 'var session_user=0;';
+        }
+    ?>
+    if(session_user)
+    {
+        location.assign("mylibrary.php");
+    }
+    else
+    {
+        location.assign("login.php");
+    }
+}
+</script>
+
 <div class="sidebar">
     <nav class="sidebar__menu">
         <ul class="sidebar__menu-list">
@@ -11,8 +35,9 @@
                     Интересное
                 </a>
             </li>
+
             <li class="sidebar__menu-item library">
-                <a class="sidebar__menu-link" href="#">
+                <a class="sidebar__menu-link <?php if ($_SERVER['REQUEST_URI'] == "/mylibrary.php") echo "active"; ?>" href="#" onclick="mylib_click()">
                     Моя библиотека
                 </a>
             </li>

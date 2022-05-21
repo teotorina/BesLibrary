@@ -9,7 +9,7 @@ if (trim($nick) == '' || trim($pass) == '')
     echo "Введены не все данные";
 }
 else {
-    include("../connect.php");
+    include("connect.php");
 
     //получаем пароль для данного логина, если ответ пустой - такого пользователя не существует, если не подходит пароль - неверный пароль
     $lodin_request = "SELECT user.password, user.id FROM user WHERE user.nick = '{$nick}';";

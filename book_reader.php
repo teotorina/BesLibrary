@@ -1,4 +1,6 @@
 <?php
+    session_start();
+
     if (isset($_GET["book_id"])) {
         $book_id = $_GET["book_id"];
     }
@@ -7,7 +9,7 @@
         $chapter_num = $_GET["chapter"];
     }
 
-    include("connect.php");
+    include("src/connect.php");
 
     $request = "SELECT book.title, chapter.title, chapter.number, chapter.text_link, author.name FROM chapter 
                             JOIN book ON book.id = chapter.book_id

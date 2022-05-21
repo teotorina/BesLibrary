@@ -1,4 +1,5 @@
 <?php
+session_start();
 $title = "Все жанры";
 include("src/header.php");
 ?>
@@ -11,7 +12,7 @@ include("src/header.php");
 </div>
 
 <?php
-    include("connect.php");
+    include("src/connect.php");
 
     //запрос для получения информации о книге
     $genre_group_request = 

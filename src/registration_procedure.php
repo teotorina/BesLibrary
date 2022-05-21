@@ -19,7 +19,7 @@ elseif ($pass1 != $pass2 || strlen($pass1) < 4 || strlen($pass1) > 20)
 }
 else
 {
-    include("../connect.php");
+    include("connect.php");
 
     //получаем пароль для данного логина, если ответ пустой - такого пользователя не существует, если не подходит пароль - неверный пароль
     $info_request = "SELECT IF(COUNT(*) > 0, 'true', 'false') FROM user WHERE user.nick = '{$nick}';";

@@ -1,6 +1,6 @@
 <?php
     session_start();
-    include("connect.php");
+    include("src/connect.php");
 
     $book_id = $_GET["book_id"];
 

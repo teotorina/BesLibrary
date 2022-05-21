@@ -339,7 +339,7 @@ body {
     line-height: 19px;
 }
 
-.block__link {
+a.block__link {
     font-size: 12px;
     line-height: 14px;
     color: #5CB48A;
@@ -416,12 +416,6 @@ body {
 .book__read {
     background-color: #8BFBC5;
 }
-
-/* .book__read a {
-    position: absolute;
-   top: 50%;
-   transform: translate(0, -50%);
-} */
 
 .book__add {
     background-color: #fff;
@@ -623,4 +617,90 @@ li.login__regist-item {
 li.login__regist-item.active {
     /* font-weight: bold; */
     border-bottom: 2px solid #000;
+}
+
+.block__nick {
+    padding-top: 25px;
+    padding-bottom: 15px;
+    margin: 0 25px;
+    border-bottom: 2px solid #000;
+}
+
+h2.nick {
+    letter-spacing: 0.1em;
+    font-size: 18px;
+    line-height: 21px;
+    padding-left: 10px;
+}
+
+.block__mylib {
+    padding: 20px 25px;
+}
+
+.mylib__top {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+    margin-bottom: 10px;
+}
+
+h2.mylib__top-title {
+    font-size: 18px;
+    line-height: 21px;
+}
+
+a.mylib__top-link {
+    color: #5CB48A;
+}
+
+.mylib__content {
+    display: flex;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(25, 155, 93, 0.2);
+}
+
+.mylib__content:last-child {
+    border-bottom: none;
+}
+
+.mylib__img-wrapper {
+    width: 120px;
+    overflow: hidden;
+    margin: 10px 10px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.mylib__read {
+    height: 25px;
+    width: 120px;
+    margin: 0 10px;
+    /* margin: 0 0 10px 25px; */
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #8BFBC5;
+}
+
+.mylib__right {
+    margin: 10px;
+}
+
+h2.mylib__book-title {
+    font-size: 16px;
+    line-height: 19px;
+    margin-bottom: 10px;
+}
+
+a.mylib__book-author {
+    font-size: 16px;
+    line-height: 19px;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+h2.mylib__description {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    line-height: 19px;
 }

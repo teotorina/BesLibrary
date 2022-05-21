@@ -36,7 +36,7 @@
 
 
                             <script>
-                            function test()
+                            function user_click()
                             {
                                 <?php
                                     if(isset($_SESSION['user_id']))
@@ -51,7 +51,7 @@
 
                                 if(session_user)
                                 {
-                                    location.assign("/user_page.php");
+                                    location.assign("user_page.php");
                                 }
                                 else
                                 {
@@ -60,7 +60,7 @@
                             }
                             </script>
 
-                            <button class="header__user-btn" onclick="test()">
+                            <button class="header__user-btn" onclick="user_click()">
                                 <img class="header__user-img" src="images/icons/user.svg" alt="Пользователь">
                             </button>
                         </div>

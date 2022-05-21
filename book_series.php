@@ -1,4 +1,5 @@
 <?php
+    session_start();
     $title = "Популярные серии книг";
     include("src/header.php");
 ?>

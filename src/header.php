@@ -38,21 +38,25 @@
                             <script>
                             function test()
                             {
-                                <?
+                                <?php
                                     if(isset($_SESSION['user_id']))
                                     {
-                                        echo '<script>var session_user=1;</script>';
+                                        echo 'var session_user=1;';
                                     }
                                     else
                                     {
-                                        echo '<script>var session_user=0;</script>';
+                                        echo 'var session_user=0;';
                                     }
                                 ?>
+
                                 if(session_user)
-                                    document.write ("сессия админа запущена");
+                                {
+                                    location.assign("/user_page.php");
+                                }
                                 else
-                                    document.write ("сессия админа не существует");
-                                
+                                {
+                                    location.assign("login.php");
+                                }
                             }
                             </script>
 

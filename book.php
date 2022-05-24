@@ -231,6 +231,18 @@ include("src/header.php");
         </div>
 
         <div class="book__comments">
+
+            <h2 class="comment__add-title">
+                Написать комментарий
+            </h2>
+
+            <!-- Поле для текста, кнопка для отправки -->
+
+            <form action="src/comment_procedure.php"  method="POST">
+                <textarea class="comment__add-text" name="comment_text" id="" <? if(!isset($_SESSION['user_id'])) echo 'readonly';  ?>></textarea>
+                <input class="comment__add" type="submit" placeholder="Отправить">
+            </form>
+
             <h2 class="book__comments-title">
                 Комментарии
             </h2>
@@ -267,8 +279,6 @@ include("src/header.php");
             <?php
             }
             ?>
-
-
         </div>
     </div>
 </main>

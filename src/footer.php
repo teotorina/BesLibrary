@@ -14,9 +14,9 @@
                 </div>
 
 
+
                 <script src="script/lib/swiper.js"></script>
                 <script src="script/src/main.js"></script>
-                <script src="script/js_out/script.js"></script>
                 </body>
 
                 </html>

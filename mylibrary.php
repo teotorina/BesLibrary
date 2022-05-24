@@ -53,10 +53,13 @@ include("src/header.php");
                                 <div class="mylib__img-wrapper">
                                     <img src="images/book-covers/<?php echo $mylib_array[$i][3] ?>" alt="Тут должна быть картинка">
                                 </div>
-                            
-                                <div class="mylib__read">
-                                <a href="book_reader.php?book_id=<?php echo $mylib_array[$i][0];?>&chapter=<?php if($mylib_array[$i][5] <= 0) echo '1'; else echo $mylib_array[$i][5];?>">Читать</a>
-                                </div>
+
+                                <a href="book_reader.php?book_id=<?php echo $mylib_array[$i][0];?>&chapter=<?php if($mylib_array[$i][5] <= 0) echo '1'; else echo $mylib_array[$i][5];?>">
+                                    <div class="mylib__read">
+                                        <p>Читать</p>
+                                    </div>
+                                </a>
+                                
                             </div>
                             
                             <div class="mylib__right">

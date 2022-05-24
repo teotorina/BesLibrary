@@ -401,16 +401,16 @@ a.block__link {
 }
 
 .book__read,
-.book__add {
+.book__add,
+.book__remove {
     height: 25px;
     max-width: 160px;
     margin: 0 0 10px 25px;
     border-radius: 5px;
-    /* text-align: center; */
     display: flex;
     justify-content: center;
     align-items: center;
-    /* position: relative; */
+    cursor: pointer;
 }
 
 .book__read {
@@ -418,6 +418,11 @@ a.block__link {
 }
 
 .book__add {
+    background: #8BFBC5;
+    border: none;
+}
+
+.book__remove {
     background-color: #fff;
     border: 1px solid #199B5D;
 }

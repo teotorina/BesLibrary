@@ -4,11 +4,11 @@ function mylib_click()
     <?php
         if(isset($_SESSION['user_id']))
         {
-            echo 'var session_user=1;';
+            echo 'let session_user=1;';
         }
         else
         {
-            echo 'var session_user=0;';
+            echo 'let session_user=0;';
         }
     ?>
     if(session_user)

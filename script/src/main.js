@@ -1,26 +1,20 @@
 const swiper = new Swiper('.swiper', {
-    // Optional parameters
     slidesPerView: 6,
     spaceBetween: 15,
   
-    // Navigation arrows
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
-
-    // responsive: {
-    //   320: {
-
-    //   },
-
-    //   768: {
-
-    //   },
-
-    //   1330: {
-
-    //   }
-    // }
   });
+  
+  // let buttonAddBook = document.querySelector('.book__add');
+  // let newBackgroundColorButtonAddBook = buttonAddBook.getAttribute('data-id');
+
+  // buttonAddBook.addEventListener('click', function(e) {
+  //   buttonAddBook.style.background = newBackgroundColorButtonAddBook;
+  // });
+
+
+
   

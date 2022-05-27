@@ -243,7 +243,8 @@ include("src/header.php");
             <!-- Поле для текста, кнопка для отправки -->
 
             <form action="src/comment_procedure.php"  method="POST">
-                <textarea class="comment__add-text" name="comment_text" id="" <? if(!isset($_SESSION['user_id'])) echo 'readonly';  ?>></textarea>
+                <input type="text" hidden name="book_id" value="<?php echo $book_id; ?>">
+                <textarea class="comment__add-text" name="comment_text" id=""></textarea>
                 <input class="comment__add" type="submit" placeholder="Отправить">
             </form>
 

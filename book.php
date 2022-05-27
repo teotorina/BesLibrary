@@ -4,6 +4,10 @@ include("src/connect.php");
 
 $book_id = $_GET["book_id"];
 
+// Добавление просмотров на книгу, при загрузки страницы
+$view_request = "UPDATE `book` SET book.view_count = book.view_count + 1 WHERE book.id = {$book_id};";
+$view_result = mysqli_query($connection, $view_request);
+
 //запрос для получения информации о книге
 $book_info_request =
     "SELECT book.title, author.name, book.cover_link, series.name, book.num_in_series, book.description, 

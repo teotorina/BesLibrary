@@ -83,6 +83,48 @@ textarea {
 .header__notification-btn {
     width: 35px;
     height: 35px;
+    position: relative;
+}
+
+.notification__block-v,
+.notification__block-h {
+    overflow: hidden;
+    top: 35px;
+    right: -40px;
+    width: 200px;
+    max-height: 80px;
+    z-index: 1000;
+    position: absolute;
+    background-color: #fff;
+    border-radius: 5px;
+    border: 2px solid rgba(25, 155, 93, 0.2);
+    cursor: default;
+}
+
+.notification__block-v {
+    visibility: visible;
+}
+
+.notification__block-h {
+    visibility: hidden;
+}
+
+.notification__block-title {
+    border-bottom: 2px solid rgba(25, 155, 93, 0.2);
+    font-size: 16px;
+    line-height: 18px;
+    margin: 0 10px;
+    padding: 10px 0;
+}
+
+.notific__list {
+    overflow: auto;
+    display: block;
+    height: 100px;
+}
+
+.notific__list li {
+    padding: 10px;
 }
 
 .header__user-btn {
@@ -863,3 +905,90 @@ p.comments__date {
 }
 
 
+.time__block {
+    display: flex;
+    height: 629px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 30px;
+    text-align: center;
+    line-height: 1.5;
+}
+
+h1.time__title {
+    font-size: 20px;
+    /* line-height: 1.5; */
+}
+
+.time__time {
+    padding: 20px;
+}
+
+.time__popup-button {
+    color: #5CB48A;
+}
+
+.popup {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.25);
+    opacity: 0;
+    visibility: hidden;
+}
+
+.popup:target {
+    opacity: 1;
+    visibility: visible;
+}
+/* 
+a.popup__area {
+    padding: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+} */
+
+.popup__body {
+    min-height: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    padding: 30px 10px;
+}
+
+.popup__content {
+    height: fit-content;
+    background-color: #fff;
+    max-width: 800px;
+    padding: 30px;
+    margin: auto 0;
+    position: relative;
+}
+
+.popup__close {
+    position: absolute;
+    font-size: 16px;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+}
+
+.popup__title {
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+.popup__text p {
+    font-size: 16px;
+    padding: 10px 0;
+}
+
+.popup__text p:last-child {
+    /* color: #199B5D; */
+    text-decoration: underline;
+}

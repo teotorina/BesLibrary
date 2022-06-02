@@ -31,10 +31,68 @@
                                 </form>
                             </div>
 
-                            <button class="header__notification-btn">
-                                <img class="header__notification-img" src="images/icons/notification.svg" alt="Уведомления">
-                            </button>
 
+                            <script>
+                                var notific_activ = true;
+                                console.log("Кнопка не нажата");
+                                function time_click(){
+                                    if(notific_activ)
+                                    {
+                                        let el = document.getElementById('notific__block');
+                                        el.className = "notification__block-v";
+                                        notific_activ = false;
+                                        console.log("Кнопка нажата");
+                                    }
+                                    else
+                                    {
+                                        let el = document.getElementById('notific__block');
+                                        el.className = "notification__block-h";
+                                        notific_activ = true;
+                                        console.log("Кнопка не нажата");
+                                    }
+                                }
+                            </script>
+
+
+                            <button class="header__notification-btn" onclick="time_click()">
+                                <img class="header__notification-img" src="images/icons/notification.svg" alt="Уведомления">
+
+                                <div class="notification__block-h" id ="notific__block">
+                                    <h2 class="notification__block-title">
+                                        Уведомления
+                                    </h2>
+
+                                    <ul class="notific__list">
+                                        <li>
+                                            <a href="time.php" class="notific__link">
+                                                <div class="notific__item">
+                                                    Скоро выйдет новая книга
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <!-- <li>
+                                            <div class="notific__item">
+                                                Вторая новость
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="notific__item">
+                                                Третья новость
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="notific__item">
+                                                Четвертая новость
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="notific__item">
+                                                Пятая новость
+                                            </div>
+                                        </li> -->
+                                    </ul>
+                                </div>
+                            </button>
 
                             <script>
                             function user_click()
@@ -66,6 +124,9 @@
                             </button>
                         </div>
                     </div>
+                    
+                    
+
                 </div>
             </div>
         </header>

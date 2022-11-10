@@ -19,16 +19,28 @@ include("src/header.php");
             </h2>
             
             <?php
+                $items_on_page = 5;
+                $current_page = $_GET['page'];
+                if(!isset($current_page))
+                    $current_page = 0;
+                elseif($current_page > 0)
+                    $current_page -= 1;
 
                 include("src/connect.php");
-                
+
+                $items_count_req = "SELECT count(*) from personal_library where user_id = {$_SESSION['user_id']};";
+                $items_count = mysqli_query($connection, $items_count_req)->fetch_all()[0][0] + 0;
+                $total_pages = ceil($items_count/$items_on_page);
+                //var_dump($total_pages);
+                $offset = $current_page * $items_on_page;
                 $mylib_request = "SELECT b.id, b.title, a.name, b.cover_link, b.description, pl.last_chapter
                                 FROM book b
                                 JOIN author a ON a.id = b.author_id
-                                JOIN personal_library pl ON pl.book_id = b.id AND pl.user_id = {$_SESSION['user_id']};";
+                                JOIN personal_library pl ON pl.book_id = b.id AND pl.user_id = {$_SESSION['user_id']}
+                                LIMIT {$items_on_page} OFFSET {$offset}";
 
                 $mylib_result = mysqli_query($connection, $mylib_request);
-
+                //var_dump($mylib_result);
                 if($mylib_result->num_rows == 0)
                 {
                     echo "Вы не добавили ни одной книги в личную библиотеку";
@@ -83,6 +95,18 @@ include("src/header.php");
                     <?php
                 }
             ?>
+            <div> 
+                <? 
+                    for($page = 1; $page <= $total_pages; $page++ ){
+                        if($current_page + 1 == $page){
+                            echo "<span style='margin-right: 10px'>{$page}</span>";
+                        }
+                        else{
+                            echo "<a style='margin-right: 10px; color: rgba(92, 180, 138, 0.6);' href='mylibrary.php?page={$page}'>{$page}</a>";
+                        }
+                    }
+                ?>
+            </div>
         </div>
     </div>
 </main>
